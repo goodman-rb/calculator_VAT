@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор НДС</title>
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=nzZEmgpZ2KVBY6bXkOdfZ07ddgaGx8ZeUJFomMxryfKx-CgZE0bHSNrS14FdatPGl44IubzhzRunrDm2zhqLfuvFPgjoKqbo8TziCvxtwm17KrwEOj_WQHkcBdfczXJdKkDNPuR_z6KRSPGQ6gwb_Hvc_yFTlqzJNCccv4X381T3SjEJWYAynoxiR_XXZpfDcGaB8zejJbiEuA4GJkqzOMLV4YMGx6bYA0spadnG1cTQ2FHshbVWb9ZUlvL5__8uyuBOZwEjPkmMCMmCLpzwemF5NO_XYF8fJjcrXm9nahmvlyoT3cL9aLMwHTMNLYyHtHLIEDUha4qShlSuFBV92sUFWIItPx6fPZZ-ZK4pZEvOmJYjH4ju67ywg67q1_cfT4E1DjKnIt1NC6qBroCXPm9yJ7Ws9xfrLzyFk6r8nk2iJ4drSsMQDNZVw8PhEYE0IxcDWLCbje509im1EplYmVFRx6oacjF5UCmqAYgOJLofJaMH_a3P00I5UbyDkQckoshOKEw6XXxVscRQIo20zp845tx0zCpzQtsbT4RltRWiW1LKJ7HVUN-6b1B_ZEKGhpZY8KKs_ubBzV10bKEN3zhzSeaNOJMy_OTCbSFYa3uSsKlWKv0W1fT4XA32D_g_yWxSz9fo3fJvVgqrr-ZXKyk-XnZUZQoeKWcZi8thE-jHVQz05rK8SY4j1Zqr15ufGMTE5eVB7FW8hNqxEYqUv28OKIwOkNT2w0kHq68Y_h75hIlQuwfUVJ-9yi6mFAjhHOVng1ZO2oJqHI0mE8vVSTTZXAcJvM08OR-QoyjEiZjMepgVcEbhpeV-CD-pZx-hGke1qR74Kcm1m8SyaO_HWMlZd-O5weDd4CV-Ca4vH0jDHl_kfl3thCWh3t3D2XAANvK9sbNpgIn-6kGMTs_GsnAE8zJfadsWIGgt9Y1ceK3N099Mpj4JW-m-PtNvB2ZBccBOnQ_jcGYfF-lQ8ryqa5BFlrC4qh7LzYC1_OHs_Z2Bk3oGAz6eRF66UwVsE0k4U0cRom6DbNKBtXnTq72GG4skh4_YOPo_P6psc8AjSwzRi4IwBrJUovXLRgvQL3_thVl4lE_U840K0njKEpkhhpEla1iYoiCQQodHOISR2najgNZM5iWOxZ-Rbf__tInP3E80WF4RG4pIcorxoaXDJDbx3zdu0BeRGSSq6lJ6163cM2zmPmR_izOVdZPb_lNiGMuK9HNjFAYfiR1ixXe5y69_iBovdWA9Khk5TGvyQpgtZgjsRTbq1yeBGT5wcoN3D4rydLZ6284RkwRPAhtqc3h0wPem3F1X3VSPDeOQxcuVbGa7yX9BvZO0EEVBEkc3_0WVSYAWB7jASzasGeRxgTW9SpBO3dJxFD3KpP972hTFD7as7L7wF5U_v_vPu4bGFGAHPdvzLhhj6iWwTRd824BI2uRHcVIR8YeqAl0MnuPQmw5aZTaq5fCjMnDLzHG2i9vk0z0pLPgC-Nw4YB3KtZrUIAi1Lp4ViHy9iFOxSxpE9glyPwVerjzNe1HQ87wu_1H4EHYnlnrYAI-KCYym2MaxZkNiE-PIUw52QVLZ4sRCXrl0IGUuNZc1RlWOoMtqb3jb9NQzACcjeVPcEaDrWgVAmdqE8UitW7Jd0rmRao3EVXqm6auE4XtN_ke6GIrX1DYxtorfYxvsgfN3eKsGMQ" nonce="b418f50e0d8f33abe4c0ec0ac1c75596" charset="UTF-8"></script><link rel="stylesheet" crossorigin="anonymous" href="https://me.kis.v2.scr.kaspersky-labs.com/E3E8934C-235A-4B0E-825A-35A08381A191/abn/main.css?attr=aHR0cHM6Ly9tYWlsLWF0dGFjaG1lbnQuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2F0dGFjaG1lbnQvdS8xLz91aT0yJmlrPWIyOWQxMDJlNDAmYXR0aWQ9MC4xJnBlcm1tc2dpZD1tc2ctZjoxODQxNTE2NDE4NjQwOTgxNDc4JnRoPTE5OGU2MTZkMGQyNTJkZTYmdmlldz1hdHQmencmZGlzcD1zYWZlJnNhZGRiYXQ9QU5HamRKOVlQYzVpRnVpbkREZXJXclI0UGZCWmZVMHhKQWhyTm9ZUTJkaTR1c0FOTGxFQmtpNFBLMkhkZllBNUdQb2xMMlppSkVwVjFpeVVGMTY4OTJjeXE4eTNNT0ExdDUyTlZaclRtMUZRS3gwMVF3dkhQUl9mQVU4ZG16bmE3dV94M2VCM2JKdGtmRVM1ZXhfVXNLM2pkY0dQT0pKck1UaklMUXBGNUo4NElvRW4zWm5CZERVVWNBd0xWeXotcHBVZHphZXFHTXZWdDQteWQ5MmxvVzFkNVViQXNIN1hYdVp1ckF1ZW5tbl9uX2t3Yk85RWFsaDB3VTdzdjNYN294VWFzb19uek5Wd3pYWUwwYU5Dcl9CRldOdGVxUnYyanB5Y0NzMldxZkhhalZOblg2cHliV1JIYmZ5MXdkb0g3VUpoZUZ4YzJFYnBPQ2E3MjlNMWhlbm1lZUw3dzdLbTlpVUZGcWc2YldicVpjMkV1OHdJUk56Z2tuLUI4akxPM1Btem5qUHNzWjhzY1F3ZkZjVUEwZ3BQZ3BybGtlNjg4R1FfSkFSTGRrTjJ1N2M3a25iMV9pbU41SkNab0p5bHE2eDQxZ0RYdldjMF9Ubkw0V2lQOE1IS3hBSHE4azhlbHdaeGJmT1RHOTFtVTc3UmNFSk5tZlBvSk5nXzJvN19xaGRuRGlrQ0txbW9Tc2ROMm1RcWFwWF83NV9fZVlGanVXeFlwWkJuNTQ1MFkxb1MzRHpyV0hJMHpkS2k2VEFYbVFybnBtVUk1WER3TkdRMjJ4eXhCbEVOeXB4R05hOVZtaFAwd2gwUFJwTVdFVGNLZk1IT2IzQkhpWER0aXBsZlVCdktLNkt0X19ZZXlJR19iUkozLWh4ZGFFQWF4OU5vSEhEekR2ME5KcmZBODZMSGJ4b2Q5THpTTUZvVXU4Q0wzcE1uQUtNeEdSMERpcjN2THUxUUxseEpaYXJ3aHJ3M3RXMTRmY1E0Zk1vaXVjVXV5NzdYWURoQzRqQkVURWJjVGRkYmNjOEFOR0ROLXpRZFoxVWhaUU00QnJTV2V4V1RremFnVGtlRlRsN1VhaV9ZOUNzWk1pUFZPM1I2cTd2WVJrUGh5Z25ZalZYajRrS3EwdFp1TllMRmFkczdzUVF4czgtVGtvM0RPUGl0TXJZeXlRVkRRaXlsRFJzWE9hbm1mek5yNXBrR25zY1BucU5pb1RhVkZQWGlhYWZRbjl0S3hweWM0b3hZNlYyR3VqZlVuWWFkd3I1WkFEa1hEYllFRVMtcWJVTlpCenJJUEVfRUxqTWZwQWltdHZ2enhyazBQdEdjakI2RmhTNzNNWERHYTNPZHlYNTZnbnJudkV5b095X3hsQzlDMGkzbC05U2ZZbEsxNUhoVVloY0ljakNoVGR4czdhZm44dw"/><script src="https://cdn.jsdelivr.net/npm/number-to-words@1.2.4/numberToWords.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #333333;
+      color: #669966;
+    }
+    .container {
+      background: #2a2a2a;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    }
+    h1 {
+      color: #CCFFCC;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #CCFFCC;
+    }
+    input, select {
+      width: 300px;
+      padding: 12px;
+      border: 1px solid #444;
+      border-radius: 5px;
+      font-size: 16px;
+      background-color: #3a3a3a;
+      color: #669966;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #669966;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 300px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #558855;
+    }
+    .copy-btn {
+      background-color: #444;
+      color: #669966;
+      padding: 6px 10px;
+      border: 1px solid #669966;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 12px;
+      width: auto;
+      margin-left: 10px;
+      flex-shrink: 0;
+    }
+    .copy-btn:hover {
+      background-color: #555;
+    }
+    .results {
+      margin-top: 30px;
+      padding: 20px;
+      background-color: #3a3a3a;
+      border-radius: 5px;
+      display: none;
+    }
+    .result-section h3 {
+      color: #669966;
+      border-bottom: 2px solid #CCFFCC;
+      padding-bottom: 5px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .result-item {
+      margin: 20px 0;
+      padding: 15px;
+      background: #2d2d2d;
+      border-radius: 5px;
+    }
+    .result-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .amount-without-vat { color: #ffffcc; }
+    .amount-with-vat { color: #ccffff; }
+    .vat-amount { color: #ffffff; }
+    .result-text-container {
+      margin-bottom: 8px;
+    }
+    .result-text {
+      background-color: #3a3a3a;
+      padding: 12px;
+      border-radius: 3px;
+      font-style: italic;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+      word-break: break-word;
+    }
+    .result-text-en {
+      background-color: #353535;
+      padding: 12px;
+      border-radius: 3px;
+      font-style: italic;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      color: #aaa;
+      word-break: break-word;
+    }
+    .text-content {
+      flex-grow: 1;
+      word-break: break-word;
+    }
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #CCFFCC;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      display: none;
+      z-index: 1000;
+    }
+    .form-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    .form-left, .form-right {
+      flex: 1;
+    }
+    .result-text-capitalized:first-letter,
+    .result-text-en-capitalized:first-letter {
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Калькулятор НДС</h1>
+    
+    <div class="form-row">
+      <div class="form-left">
+        <div class="form-group">
+          <label for="amount">Введите сумму:</label>
+          <input type="number" id="amount" placeholder="Например: 123456" step="0.01">
+        </div>
+      </div>
+      
+      <div class="form-right">
+        <div class="form-group">
+          <label for="country">Выберите страну:</label>
+          <select id="country">
+            <option value="Россия">Россия (20%)</option>
+            <option value="Казахстан">Казахстан (12%)</option>
+            <option value="Беларусь">Беларусь (20%)</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="action">Выберите действие:</label>
+          <select id="action">
+            <option value="add">Начислить НДС</option>
+            <option value="extract">Выделить НДС</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center;">
+      <button onclick="calculate()">Рассчитать</button>
+    </div>
+    
+    <div id="results" class="results">
+      <div class="result-section">
+        <h3>Результаты расчета:</h3>
+        <div id="resultContent"></div>
+      </div>
+    </div>
+
+  
+    <div style="text-align: center; margin-top: 30px; color: #ffffff; font-size: 12px; font-style:bold; opacity: 0.6;">
+      <br><br>
+	Создано @Mr.Goodman<br><br>
+	t.me/AI_bo_li_t
+    </div>
+  </div>
+
+
+  <div id="notification" class="notification">Скопировано в буфер обмена!</div>
+
+  <script>
+    const countryData = {
+      'Россия': { 
+        rate: 0.20, 
+        ru: { currency: 'рубль', currencyPlural: 'рублей', minor: 'копейка', minorPlural: 'копеек' },
+        en: { currency: 'ruble', currencyPlural: 'rubles', minor: 'kopeck', minorPlural: 'kopecks' }
+      },
+      'Казахстан': { 
+        rate: 0.12, 
+        ru: { currency: 'тенге', currencyPlural: 'тенге', minor: 'тиын', minorPlural: 'тиынов' },
+        en: { currency: 'tenge', currencyPlural: 'tenge', minor: 'tyin', minorPlural: 'tyin' }
+      },
+      'Беларусь': { 
+        rate: 0.20, 
+        ru: { currency: 'рубль', currencyPlural: 'рублей', minor: 'копейка', minorPlural: 'копеек' },
+        en: { currency: 'ruble', currencyPlural: 'rubles', minor: 'kopeck', minorPlural: 'kopecks' }
+      }
+    };
+
+    // Функция для преобразования чисел в текст на русском
+    function numberToRussian(num) {
+      const ones = ['', 'один', 'два', 'три', 'четыре', 'пять', 'шесть', 'семь', 'восемь', 'девять'];
+      const teens = ['десять', 'одиннадцать', 'двенадцать', 'тринадцать', 'четырнадцать', 'пятнадцать', 'шестнадцать', 'семнадцать', 'восемнадцать', 'девятнадцать'];
+      const tens = ['', '', 'двадцать', 'тридцать', 'сорок', 'пятьдесят', 'шестьдесят', 'семьдесят', 'восемьдесят', 'девяносто'];
+      const hundreds = ['', 'сто', 'двести', 'триста', 'четыреста', 'пятьсот', 'шестьсот', 'семьсот', 'восемьсот', 'девятьсот'];
+      
+      const thousands = ['', 'тысяча', 'тысячи', 'тысяч'];
+      const millions = ['', 'миллион', 'миллиона', 'миллионов'];
+      const billions = ['', 'миллиард', 'миллиарда', 'миллиардов'];
+
+      if (num === 0) return 'ноль';
+
+      function getPlural(n, words) {
+        const lastDigit = n % 10;
+        const lastTwoDigits = n % 100;
+        
+        if (lastTwoDigits >= 11 && lastTwoDigits <= 19) return words[3];
+        if (lastDigit === 1) return words[1];
+        if (lastDigit >= 2 && lastDigit <= 4) return words[2];
+        return words[3];
+      }
+
+      function convertTriplet(n) {
+        let result = '';
+        const h = Math.floor(n / 100);
+        const t = Math.floor((n % 100) / 10);
+        const o = n % 10;
+        
+        if (h > 0) result += hundreds[h] + ' ';
+        if (t === 1) {
+          result += teens[o] + ' ';
+        } else {
+          if (t > 0) result += tens[t] + ' ';
+          if (o > 0) result += ones[o] + ' ';
+        }
+        return result.trim();
+      }
+
+      const billionsPart = Math.floor(num / 1000000000);
+      const millionsPart = Math.floor((num % 1000000000) / 1000000);
+      const thousandsPart = Math.floor((num % 1000000) / 1000);
+      const unitsPart = num % 1000;
+
+      let result = '';
+
+      if (billionsPart > 0) {
+        result += convertTriplet(billionsPart) + ' ' + getPlural(billionsPart, billions) + ' ';
+      }
+      if (millionsPart > 0) {
+        result += convertTriplet(millionsPart) + ' ' + getPlural(millionsPart, millions) + ' ';
+      }
+      if (thousandsPart > 0) {
+        let thousandsText = convertTriplet(thousandsPart);
+        // Специальные формы для тысяч
+        if (thousandsPart % 10 === 1 && thousandsPart % 100 !== 11) {
+          thousandsText = thousandsText.replace('один', 'одна');
+        } else if (thousandsPart % 10 === 2 && thousandsPart % 100 !== 12) {
+          thousandsText = thousandsText.replace('два', 'две');
+        }
+        result += thousandsText + ' ' + getPlural(thousandsPart, thousands) + ' ';
+      }
+      if (unitsPart > 0) {
+        result += convertTriplet(unitsPart) + ' ';
+      }
+
+      return result.trim();
+    }
+
+    // Функция для капитализации первой буквы
+    function capitalizeFirstLetter(string) {
+      if (!string) return string;
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    function formatCurrencyRu(amount, currencyData) {
+      const whole = Math.floor(amount);
+      const fractional = Math.round((amount - whole) * 100);
+      
+      const wholeText = numberToRussian(whole);
+      const currencyWord = getCurrencyWord(whole, currencyData.ru);
+      const fractionalText = fractional.toString().padStart(2, '0');
+      const minorWord = getMinorWord(fractional, currencyData.ru);
+      
+      const result = `${wholeText} ${currencyWord} ${fractionalText} ${minorWord}`;
+      return capitalizeFirstLetter(result);
+    }
+
+    function getCurrencyWord(number, currencyData) {
+      const lastDigit = number % 10;
+      const lastTwoDigits = number % 100;
+      
+      if (lastTwoDigits >= 11 && lastTwoDigits <= 19) return currencyData.currencyPlural;
+      if (lastDigit === 1) return currencyData.currency;
+      if (lastDigit >= 2 && lastDigit <= 4) return currencyData.currencyPlural;
+      return currencyData.currencyPlural;
+    }
+
+    function getMinorWord(number, currencyData) {
+      const lastDigit = number % 10;
+      const lastTwoDigits = number % 100;
+      
+      if (lastTwoDigits >= 11 && lastTwoDigits <= 19) return currencyData.minorPlural;
+      if (lastDigit === 1) return currencyData.minor;
+      if (lastDigit >= 2 && lastDigit <= 4) return currencyData.minorPlural;
+      return currencyData.minorPlural;
+    }
+
+    function formatCurrencyEn(amount, currencyData) {
+      const whole = Math.floor(amount);
+      const fractional = Math.round((amount - whole) * 100);
+      const toWords = window.numberToWords.toWords;
+      
+      try {
+        const wholeText = toWords(whole).replace(/,/g, '');
+        const currencyWord = (whole === 1 ? currencyData.en.currency : currencyData.en.currencyPlural);
+        const fractionalText = fractional.toString().padStart(2, '0');
+        const minorWord = fractional === 1 ? currencyData.en.minor : currencyData.en.minorPlural;
+        
+        const result = `${wholeText} ${currencyWord} ${fractionalText} ${minorWord}`;
+        return capitalizeFirstLetter(result);
+      } catch (e) {
+        const result = `${whole} ${currencyData.en.currencyPlural} ${fractional.toString().padStart(2, '0')} ${currencyData.en.minorPlural}`;
+        return capitalizeFirstLetter(result);
+      }
+    }
+
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => {
+        showNotification();
+      });
+    }
+
+    function showNotification() {
+      const notification = document.getElementById('notification');
+      notification.style.display = 'block';
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 2000);
+    }
+
+    function createResultBlock(label, number, textRu, textEn, cssClass) {
+      return `
+        <div class="result-item">
+          <div class="result-header ${cssClass}">
+            <span>${label}: ${number.toLocaleString('ru-RU', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</span>
+            <button class="copy-btn" onclick="copyToClipboard('${number.toLocaleString('ru-RU', {minimumFractionDigits: 2, maximumFractionDigits: 2})}')">Копировать</button>
+          </div>
+          <div class="result-text-container">
+            <div class="result-text ${cssClass}">
+              <span class="text-content">${textRu}</span>
+              <button class="copy-btn" onclick="copyToClipboard('${textRu}')">Копировать</button>
+            </div>
+            <div class="result-text-en">
+              <span class="text-content">${textEn}</span>
+              <button class="copy-btn" onclick="copyToClipboard('${textEn}')">Copy</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function calculate() {
+      const amountInput = document.getElementById('amount').value;
+      if (!amountInput) {
+        alert('Пожалуйста, введите сумму');
+        return;
+      }
+      
+      const amount = parseFloat(amountInput);
+      const country = document.getElementById('country').value;
+      const action = document.getElementById('action').value;
+      const data = countryData[country];
+      const rate = data.rate;
+
+      let baseAmount, vat, totalAmount;
+
+      if (action === 'add') {
+        baseAmount = amount;
+        vat = amount * rate;
+        totalAmount = amount + vat;
+      } else {
+        totalAmount = amount;
+        baseAmount = amount / (1 + rate);
+        vat = amount - baseAmount;
+      }
+
+      // Русские текстовые значения
+      const baseAmountRu = formatCurrencyRu(baseAmount, data);
+      const totalAmountRu = formatCurrencyRu(totalAmount, data);
+      const vatRu = formatCurrencyRu(vat, data);
+
+      // Английские текстовые значения
+      const baseAmountEn = formatCurrencyEn(baseAmount, data);
+      const totalAmountEn = formatCurrencyEn(totalAmount, data);
+      const vatEn = formatCurrencyEn(vat, data);
+
+      // Создаем блоки результатов
+      const resultContent = `
+        ${createResultBlock('Сумма без НДС', baseAmount, baseAmountRu, baseAmountEn, 'amount-without-vat')}
+        ${createResultBlock('Сумма с НДС', totalAmount, totalAmountRu, totalAmountEn, 'amount-with-vat')}
+        ${createResultBlock('НДС', vat, vatRu, vatEn, 'vat-amount')}
+      `;
+
+      document.getElementById('resultContent').innerHTML = resultContent;
+      document.getElementById('results').style.display = 'block';
+    }
+
+    // Пример заполнения для тестирования
+    window.onload = function() {
+      document.getElementById('amount').value = '';
+    }
+  </script>
+
+<script>
+// Запуск расчета по нажатию Enter
+document.getElementById('amount').addEventListener('keypress', function(e) {
+  if (e.key === 'Enter') {
+    calculate();
+  }
+});
+
+// Фокус на поле ввода при загрузке
+window.onload = function() {
+  document.getElementById('amount').focus();
+  document.getElementById('amount').value = '';
+}
+</script>
+
+</body>
+</html>
