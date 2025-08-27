@@ -94,6 +94,7 @@ git clone https://github.com/ваш-логин/nds-calculator.git
 
 **Результат:**
 
+
 Сумма без НДС: 123 456.00 рублей
 
 Сумма с НДС: 148 147.20 рублей
@@ -104,12 +105,11 @@ git clone https://github.com/ваш-логин/nds-calculator.git
 
 *Сто двадцать три тысячи четыреста пятьдесят шесть рублей 00 копеек*
 
----
 *One hundred twenty-three thousand four hundred fifty-six rubles 00 kopecks*
 
 
 
-
+---
 
 *Создано с ❤️ для упрощения бухгалтерских расчетов*
 
